@@ -6,11 +6,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Pagina404 from "./paginas/Pagina404";
 import Cabecalho from "./components/Cabecalho";
 import Post from "./paginas/post";
+import Categoria from "./paginas/Categoria";
 
 function App() {
   return (
     <Router>
-      <Cabecalho/>
+      <Cabecalho />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route path="/posts/:id">
           <Post />
+        </Route>
+        <Route path="/categoria/:id">
+          <Categoria />
         </Route>
         <Route>
           <Pagina404 />
